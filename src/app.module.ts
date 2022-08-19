@@ -8,8 +8,8 @@ import { DatabaseModule } from './modulos/database/database.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
+    DatabaseModule,
     GradosModule,
-    DatabaseModule
   ],
   controllers: [AppController],
   providers: [AppService],

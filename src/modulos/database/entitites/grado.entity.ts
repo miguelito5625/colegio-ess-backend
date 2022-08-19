@@ -1,8 +1,8 @@
 // import { CreateClientDto } from "src/modules/clients/create-client.dto";
 import {Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Column} from "typeorm";
 
-@Entity('addresses')
-export class AddressEntity {
+@Entity('grados')
+export class GradoEntity {
 
     //generate and fill addressentity instance
     // generate(createClientDto: CreateClientDto){
@@ -18,21 +18,14 @@ export class AddressEntity {
     id: number;
 
     @Column()
-    country: string;
+    nombre: string;
 
-    @Column()
-    departament: string;
+    // @Column({ default: true })
+    // isActive?: boolean;
 
-    @Column()
-    municipality: string;
+    // @CreateDateColumn({type: "timestamp"})
+    // createdAt?: Date;
 
-    @Column()
-    street: string;
-
-    @Column()
-    reference: string;
-
-    @Column()
-    zip_code: string;
-
+    // @UpdateDateColumn({type: "timestamp"})
+    // updatedAt?: Date;
 }
