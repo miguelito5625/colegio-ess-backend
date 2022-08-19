@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { GradosController } from './grados.controller';
 import { GradosService } from './grados.service';
+import { GradosController } from './grados.controller';
 
 @Module({
-  controllers: [GradosController],
-  providers: [GradosService]
+  providers: [GradosService],
+  controllers: [GradosController]
 })
 export class GradosModule {}

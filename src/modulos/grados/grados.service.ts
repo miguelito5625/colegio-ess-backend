@@ -4,5 +4,5 @@ import { Injectable } from '@nestjs/common';
 export class GradosService {
     getHello(): string {
         return 'Hello World! grados';
-      }
+    }
 }
