@@ -1,8 +1,8 @@
 // import { CreateClientDto } from "src/modules/clients/create-client.dto";
-import {Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Column} from "typeorm";
+import {Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Column, BaseEntity} from "typeorm";
 
 @Entity('grados')
-export class GradoEntity {
+export class GradoEntity extends BaseEntity {
 
     //generate and fill addressentity instance
     // generate(createClientDto: CreateClientDto){
