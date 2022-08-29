@@ -1,5 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, HttpStatus, Res } from '@nestjs/common';
 import { GradosService } from './grados.service';
+import { Response } from "express";
 
 @Controller('grados')
 export class GradosController {
@@ -11,8 +12,14 @@ export class GradosController {
     }
 
     @Get()
-    getHello(): string {
-        return this.servicioGrados.getHello();
+    async listarGrados(@Res() res: Response) {
+        const grados = await this.servicioGrados.findAll();
+        return res.status(HttpStatus.OK).json({
+            message: 'Grados listados',
+            status: 'ok',
+            cantidad_grados: grados.length,
+            grados
+        });
     }
 
 }

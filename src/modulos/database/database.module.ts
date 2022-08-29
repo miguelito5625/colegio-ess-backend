@@ -1,8 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
-import { GradoEntity } from './entitites/grado.entity';
-import { MisMigrations } from './migrations/mismigrations';
+import { MisMigraciones } from './migrations/mismigraciones';
 
 @Module({
     imports: [
@@ -23,7 +22,8 @@ import { MisMigrations } from './migrations/mismigrations';
   })
   export class DatabaseModule {
     constructor(private dataSource: DataSource) {      
-      const migration = new MisMigrations();
+      const migration = new MisMigraciones();
       migration.crearGrados();
+      migration.crearMaterias();
     }
   }
