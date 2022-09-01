@@ -23,7 +23,7 @@ import { MisMigraciones } from './migrations/mismigraciones';
   export class DatabaseModule {
     constructor(private dataSource: DataSource) {      
       const migration = new MisMigraciones();
-      migration.crearGrados();
-      migration.crearMaterias();
+      // migration.crearGrados();
+      // migration.crearMaterias();
     }
   }

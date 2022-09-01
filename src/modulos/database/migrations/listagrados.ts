@@ -1,5 +1,5 @@
 export const listaGrados = [
-    "Parvulos",
+    // "Parvulos",
     "1ro Primaria",
     "2do Primaria",
     "3ro Primaria",
